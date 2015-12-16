@@ -16,12 +16,21 @@ function handleTab() {
 
 handleTab();
 
-
-// CodeMirror
 var inputTextarea = document.getElementById("editor");
 var outputTextarea = document.getElementById("output-text");
 var inputErrorEl = document.getElementById("input-error");
 
+function UpdateInputHeight() {
+    var _inputEl = document.getElementsByClassName("input")[0];
+    var _inputCodeMirrorEl = _inputEl.getElementsByClassName("CodeMirror")[0];
+    if (!_inputCodeMirrorEl) { return; }
+    var _inputErrorEl = document.getElementById("input-error");
+    var errortHeight = _inputErrorEl.clientHeight;  
+    var inputHeight = _inputEl.clientHeight;
+    _inputCodeMirrorEl.style.height = (inputHeight -errortHeight) + "px";
+};
+
+// CodeMirror
 var inputCodeMirror = CodeMirror.fromTextArea(inputTextarea, {  
     lineNumbers: true,
     mode: "javascript" 
@@ -43,5 +52,7 @@ inputCodeMirror.on("change", function(me, ctx) {
     } catch (e) {
         inputErrorEl.innerHTML = "<pre>" + e + "</pre>";
     }
+    
+    //UpdateInputHeight();
 });
 
