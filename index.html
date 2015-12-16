@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JS Dogs</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./libs/codemirror/codemirror.css" />
+    </head>
+
+    <body>
+        <nav id="header">
+            <button><a href="https://github.com/Dongss/js-dogs">GitHub</a></button>
+            Compile ES6 code to ES5
+        </nav>
+
+        <div id="main-container">
+            <div class="input">
+                <textarea id="editor"></textarea>
+                <div id="input-error"></div>
+            </div>         
+            <div class="output">
+                <textarea id="output-text"></textarea>
+            </div>           
+        </div>
+    </body>
+
+    <script src="./libs/babel.js"></script>
+    <script src="./libs/codemirror/codemirror.js"></script>
+    <script src="./libs/codemirror/javascript.js"></script>
+    <script src="./scripts/index.js"></script>
+</html>
