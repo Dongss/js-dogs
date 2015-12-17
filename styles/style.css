@@ -31,7 +31,7 @@ body {
 }
 .input {
     height: 100%;
-    width: 49%;
+    width: 50%;
     float: left;
 }
 .output {
@@ -43,19 +43,20 @@ body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     word-wrap: break-word;
-    width: 49%
+    width: 50%
 }
 .CodeMirror {
-    width: 49%;
     float: none;
 }
 .input .CodeMirror{
     height: 100%; 
+    width: 50%;
     margin-bottom: 210px;
     position: fixed;
 }   
 .output .CodeMirror {
     height: 100%;
+    width: 100%;
 }
 #input-error { 
     width: 49%;

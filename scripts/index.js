@@ -27,7 +27,7 @@ function UpdateInputHeight() {
     var _inputErrorEl = document.getElementById("input-error");
     var errortHeight = _inputErrorEl.clientHeight;  
     var inputHeight = _inputEl.clientHeight;
-    _inputCodeMirrorEl.style.height = (inputHeight -errortHeight) + "px";
+    _inputCodeMirrorEl.style.height = (inputHeight -errortHeight - 30) + "px";
 };
 
 // CodeMirror
@@ -53,6 +53,6 @@ inputCodeMirror.on("change", function(me, ctx) {
         inputErrorEl.innerHTML = "<pre>" + e + "</pre>";
     }
     
-    //UpdateInputHeight();
+    UpdateInputHeight();
 });
 
